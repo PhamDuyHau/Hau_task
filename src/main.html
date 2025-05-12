@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Navbar Layout</title>
+    
+</head>
+
+<body>
+    <div class="header">
+        <!-- Top Navbar -->
+        <div class="top-navbar">
+            <!-- Logo -->
+            <a href="#">
+                <img src="./Image/logo_image.png" alt="Company Logo" />
+            </a>
+
+            <!-- Phone & Tra cứu -->
+            <div class="right-info">
+                <a href="tel:02862775544" class="phone-number">
+                    <i class="fas fa-phone"></i> 02862 77 55 44
+                </a>
+
+                <a href="#">TRA CỨU VÉ</a>
+                <a href="#">TRA CỨU ĐƠN HÀNG</a>
+            </div>
+        </div>
+
+        <!-- Bottom Navbar -->
+
+        <div class="bottom-navbar">
+            <ul>
+                <li><a href="#" class="has-dropdown">Trang chủ</a></li>
+                <li>
+                    <a href="#" class="has-dropdown">Giới thiệu</a>
+                    <ul class="dropdown">
+                        <li><a href="#">VỀ CHÚNG TÔI</a></li>
+                        <li><a href="#">HỆ THỐNG VĂN PHÒNG</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="has-dropdown">Dịch vụ</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Dịch vụ A</a></li>
+                        <li><a href="#">Dịch vụ B</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="has-dropdown">TRA CỨU</a>
+                    <ul class="dropdown">
+                        <li><a href="#">TRA CỨU VỀ</a></li>
+                        <li><a href="#">TRA CỨU ĐƠN HÀNG</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+                <li>
+                    <a href="#"><i class="fas fa-search search-icon"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-image">
+        <img src="./Image/main_image.png" alt="Main Image" />
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+
+        <div class="input-box">
+            <div class="input-item">
+                <p><i class="fa-solid fa-location-dot"></i> Nơi đi</p>
+                <input type="text" placeholder="Nhập nơi đi">
+            </div>
+            <div class="input-separator"></div>
+
+            <div class="input-item">
+                <p><i class="fa-solid fa-location-dot"></i> Nơi đến</p>
+                <input type="text" placeholder="Nhập nơi đến">
+            </div>
+            <div class="input-separator"></div>
+
+            <div class="input-item">
+                <p><i class="fa-solid fa-calendar-days"></i> Ngày đi</p>
+                <input type="text" placeholder="12.11.2024" value="12.11.2024">
+            </div>
+            <div class="input-separator"></div>
+
+            <div class="input-item">
+                <p><i class="fa-solid fa-calendar-days"></i> Ngày đến</p>
+                <input type="text" placeholder="30.12.2024" value="30.12.2024">
+            </div>
+
+            <div class="input-submit">
+                <a href="#">Tìm vé xe</a>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h1>Dễ dàng đặt vé trên Website của Mỹ Duyên</h1>
+        </div>
+        <div class="first-section">
+            <div class="first-layout-box first-layout-box-color-1">
+                <img src="./Image/find_image.png" alt="Tìm kiếm" />
+                <div>
+                    <h5>Tìm kiếm</h5>
+                    <p>Chọn thông tin hành trình</p>
+                </div>
+            </div>
+
+            <div class="first-layout-box first-layout-box-color-2">
+                <img src="./Image/select_a_trip.png" alt="Chọn chuyến" />
+                <div>
+                    <h5>Chọn chuyến</h5>
+                    <p>Chọn chuyến phù hợp ấn "Đặt chỗ"</p>
+                </div>
+            </div>
+
+            <div class="first-layout-box first-layout-box-color-3">
+                <img src="./Image/pay_image.png" alt="Thanh toán" />
+                <div>
+                    <h5>Thanh toán</h5>
+                    <p>Chọn cổng thanh toán ấn "Thanh toán"</p>
+                </div>
+            </div>
+
+            <div class="first-layout-box first-layout-box-color-4">
+                <img src="./Image/ticket_image.png" alt="Đặt vé" />
+                <div>
+                    <h5>Đặt vé</h5>
+                    <p>Nhận thông tin vé thành công và lên xe</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="second-section">
+            <div class="section-title">
+                <h1>Lộ trình phổ biến</h1>
+            </div>
+
+            <div class="second-layout">
+                <div class="second-layout-box">
+                    <div class="second-layout-box-title">
+                        <img src="./Image/second_layout_box_title.png" alt="Xe buýt" />
+                    </div>
+
+                    <div class="second-layout-box-main">
+                        <div class="second-layout-box-main-row">
+                            <div class="second-layout-box-main-city">
+                                <p><i class="fa-solid fa-circle-up"></i> Sài Gòn</p>
+                                <p class="arrows-icon">
+                                    <i class="fa-solid fa-arrows-up-down"></i>
+                                </p>
+                                <p><i class="fa-solid fa-circle-down"></i> Bến Tre</p>
+                            </div>
+                            <div class="second-layout-box-main-price">
+                                <p>Từ: 160.000đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="second-layout-box-end">
+                        <div class="second-layout-box-end-detail">
+                            <p><i class="fas fa-bus"></i>LIMOUSINE 34 GIƯỜNG</p>
+                        </div>
+
+                        <div class="second-layout-box-end-time">
+                            <div class="time-info">
+                                <p>
+                                    <i class="fa-solid fa-location-dot"></i> Khoảng cách: 170 Km
+                                </p>
+                                <p><i class="fas fa-clock"></i> Thời gian: 1h30</p>
+                            </div>
+                            <a href="#">Đặt vé</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="second-layout-box">
+                    <div class="second-layout-box-title">
+                        <img src="./Image/second_layout_box_title.png" alt="Xe buýt" />
+                    </div>
+
+                    <div class="second-layout-box-main">
+                        <div class="second-layout-box-main-row">
+                            <div class="second-layout-box-main-city">
+                                <p><i class="fa-solid fa-circle-up"></i> Sài Gòn</p>
+                                <p class="arrows-icon">
+                                    <i class="fa-solid fa-arrows-up-down"></i>
+                                </p>
+                                <p><i class="fa-solid fa-circle-down"></i> Bến Tre</p>
+                            </div>
+                            <div class="second-layout-box-main-price">
+                                <p>Từ: 160.000đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="second-layout-box-end">
+                        <div class="second-layout-box-end-detail">
+                            <p><i class="fas fa-bus"></i>LIMOUSINE 34 GIƯỜNG</p>
+                        </div>
+
+                        <div class="second-layout-box-end-time">
+                            <div class="time-info">
+                                <p>
+                                    <i class="fa-solid fa-location-dot"></i> Khoảng cách: 170 Km
+                                </p>
+                                <p><i class="fas fa-clock"></i> Thời gian: 1h30</p>
+                            </div>
+                            <a href="#">Đặt vé</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="second-layout-box">
+                    <div class="second-layout-box-title">
+                        <img src="./Image/second_layout_box_title.png" alt="Xe buýt" />
+                    </div>
+
+                    <div class="second-layout-box-main">
+                        <div class="second-layout-box-main-row">
+                            <div class="second-layout-box-main-city">
+                                <p><i class="fa-solid fa-circle-up"></i> Sài Gòn</p>
+                                <p class="arrows-icon">
+                                    <i class="fa-solid fa-arrows-up-down"></i>
+                                </p>
+                                <p><i class="fa-solid fa-circle-down"></i> Bến Tre</p>
+                            </div>
+                            <div class="second-layout-box-main-price">
+                                <p>Từ: 160.000đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="second-layout-box-end">
+                        <div class="second-layout-box-end-detail">
+                            <p><i class="fas fa-bus"></i>LIMOUSINE 34 GIƯỜNG</p>
+                        </div>
+
+                        <div class="second-layout-box-end-time">
+                            <div class="time-info">
+                                <p>
+                                    <i class="fa-solid fa-location-dot"></i> Khoảng cách: 170 Km
+                                </p>
+                                <p><i class="fas fa-clock"></i> Thời gian: 1h30</p>
+                            </div>
+                            <a href="#">Đặt vé</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="second-layout-box">
+                    <div class="second-layout-box-title">
+                        <img src="./Image/second_layout_box_title.png" alt="Xe buýt" />
+                    </div>
+
+                    <div class="second-layout-box-main">
+                        <div class="second-layout-box-main-row">
+                            <div class="second-layout-box-main-city">
+                                <p><i class="fa-solid fa-circle-up"></i> Sài Gòn</p>
+                                <p class="arrows-icon">
+                                    <i class="fa-solid fa-arrows-up-down"></i>
+                                </p>
+                                <p><i class="fa-solid fa-circle-down"></i> Bến Tre</p>
+                            </div>
+                            <div class="second-layout-box-main-price">
+                                <p>Từ: 160.000đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="second-layout-box-end">
+                        <div class="second-layout-box-end-detail">
+                            <p><i class="fas fa-bus"></i>LIMOUSINE 34 GIƯỜNG</p>
+                        </div>
+
+                        <div class="second-layout-box-end-time">
+                            <div class="time-info">
+                                <p>
+                                    <i class="fa-solid fa-location-dot"></i> Khoảng cách: 170 Km
+                                </p>
+                                <p><i class="fas fa-clock"></i> Thời gian: 1h30</p>
+                            </div>
+                            <a href="#">Đặt vé</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hàng Cài Đặt App đặt vé Mỹ Duyên -->
+    <div class="third-section">
+        <div class="third-section-left">
+            <div class="third-section-left-content">
+                <div class="third-section-left-main-title">
+                    <h1>Cài Đặt App đặt vé</h1>
+                    <h1>Mỹ Duyên</h1>
+                </div>
+
+                <div class="third-section-left-description">
+                    <p>
+                        Cài Đặt nhanh ứng dụng để đặt vé từ Sài Gòn - Sóc Trăng
+                    </p>
+                    <p>ngay hôm nay</p>
+                </div>
+            </div>
+
+            <div class="third-section-left-small-title">
+                <h2>Tải App và cài đặt</h2>
+            </div>
+
+            <div class="third-section-left-image">
+                <img src="./Image/google_play.png" alt="Google play" />
+            </div>
+
+            <div class="third-section-left-image">
+                <img src="./Image/app_store.png" alt="App Store" />
+            </div>
+        </div>
+
+
+        <div class="third-section-right">
+            <div class="third-section-right-phone-image-left">
+                <img src="./Image/phone_left.png" alt="Phone left image" />
+            </div>
+
+            <div class="third-section-right-phone-image-right">
+                <img src="./Image/phone_right.png" alt="Phone right image" />
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="fourth-section">
+            <div class="section-title">
+                <h1>Dịch vụ hành khách</h1>
+            </div>
+
+            <div class="fourth-section-box">
+                <div class="fourth-section-detail">
+                    <div class="fourth-section-detail-image">
+                        <img src="./Image/tien_ich_cao_cap.png" alt="Tiện ích cao cấp">
+                    </div>
+
+                    <div class="fourth-section-detail-title">
+                        <p>Tiện ích cao cấp</p>
+                    </div>
+
+                    <div class="fourth-section-detail-description">
+                        <p>Mỹ Duyên có quy mô xe lớn, có hệ thống dòng xe limousine đời mới, hiện đại trên tuyến. Đem
+                            lại sự sang trọng và đầy đủ tiện ích như ghế nằm, nước uống, máy lạnh…</p>
+                    </div>
+
+                    <hr>
+
+                    <div class="fourth-section-detail-noted">
+                        <p><i class="fa-solid fa-circle-check"></i> Toàn bộ xe được trang bị nội thất tốt đẹp</p>
+                    </div>
+
+                    <div class="fourth-section-detail-noted">
+                        <p><i class="fa-solid fa-circle-check"></i> Luôn phục vụ nước uống và wifi trên xe</p>
+                    </div>
+
+                    <div class="fourth-section-detail-noted">
+                        <p><i class="fa-solid fa-circle-check"></i> Xe luôn được vệ sinh sạch sẽ sau mỗi chuyến đi</p>
+                    </div>
+                </div>
+
+                <div class="fourth-section-detail">
+                    <div class="fourth-section-detail-image">
+                        <img src="./Image/dap_ung_moi_khung_gio.png" alt="Đáp ứng mọi khung giờ">
+                    </div>
+
+                    <div class="fourth-section-detail-title">
+                        <p>Đáp ứng mọi khung giờ</p>
+                    </div>
+
+                    <div class="fourth-section-detail-description">
+                        <p>Mỹ Duyên cung cấp tới khách hàng các khung giờ đẹp và hợp lý. Tổng đài của chúng tôi luôn sẵn
+                            sàng hỗ trợ khách hàng, mang lại sự tiện lợi và thoải mái cho khách hàng trong quá trình sử
+                            dụng dịch vụ.</p>
+                    </div>
+
+                    <hr>
+
+                    <div class="fourth-section-detail-noted">
+                        <p><i class="fa-solid fa-circle-check"></i> Đáp ứng khung giờ phù hợp nhiều loại khách</p>
+                    </div>
+
+                    <div class="fourth-section-detail-noted">
+                        <p><i class="fa-solid fa-circle-check"></i> Hoạt động từ 4h sáng - 24h hằng ngày</p>
+                    </div>
+
+                    <div class="fourth-section-detail-noted">
+                        <p><i class="fa-solid fa-circle-check"></i> Tư vấn tại hotline 02862 77 55 44</p>
+                    </div>
+                </div>
+
+                <div class="fourth-section-detail">
+                    <div class="fourth-section-detail-image">
+                        <img src="./Image/dich_vu_dang_cap.png" alt="Dịch vụ đẳng cấp">
+                    </div>
+
+                    <div class="fourth-section-detail-title">
+                        <p>Dịch vụ đẳng cấp</p>
+                    </div>
+
+                    <div class="fourth-section-detail-description">
+                        <p>Đội ngũ nhân viên nhà xe phục vụ chuyên nghiệp. Mỹ Duyên luôn đặt chất lượng dịch vụ lên hàng
+                            đầu với khẩu hiệu “Chất lượng là danh dự”. Mỹ Duyên là thương hiệu vận tải hàng đầu trong
+                            tuyến Sóc Trăng.</p>
+                    </div>
+
+                    <hr>
+
+                    <div class="fourth-section-detail-noted">
+                        <p><i class="fa-solid fa-circle-check"></i> Điểm đón, trả đa dạng, phù hợp với nhu cầu của khách
+                            hàng</p>
+                    </div>
+
+                    <div class="fourth-section-detail-noted">
+                        <p><i class="fa-solid fa-circle-check"></i> Nhân viên nhà xe được đào tạo chuyên nghiệp</p>
+                    </div>
+
+                    <div class="fourth-section-detail-noted">
+                        <p><i class="fa-solid fa-circle-check"></i> Đặt vé và thanh toán qua nhiều hình thức khác nhau
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="fifth-section">
+        <div class="fifth-section-title">
+            <h1>Dịch vụ hành hóa</h1>
+        </div>
+
+        <div class="fifth-section-detail">
+            <div class="fifth-section-detail-box">
+
+                <div class="fifth-section-detail-box-image1">
+                    <img src="./Image/boi_thuong_that_lac.png" alt="Bồi thường thất lạc">
+                </div>
+
+                <div class="fifth-section-detail-box-title">
+                    <h2>Bồi thường thất lạc</h2>
+                </div>
+
+                <div class="fifth-section-detail-box-description">
+                    Khách hàng sẽ nhận bồi thường khi hàng hóa bị mất, thiếu hoặc hỏng hóc
+                </div>
+            </div>
+
+            <div class="fifth-section-detail-box">
+
+                <div class="fifth-section-detail-box-image2">
+                    <img src="./Image/giao_hang_hoa_toc.png" alt="Giao hàng hỏa tốc">
+                </div>
+
+                <div class="fifth-section-detail-box-title">
+                    <h2>Giao hàng hỏa tốc</h2>
+                </div>
+
+                <div class="fifth-section-detail-box-description">
+                    Khách hàng sẽ nhận bồi thường khi hàng hóa bị mất, thiếu hoặc hỏng hóc
+                </div>
+            </div>
+
+            <div class="fifth-section-detail-box">
+
+                <div class="fifth-section-detail-box-image3">
+                    <img src="./Image/thu_ho_COD.png" alt="Thu hộ COD">
+                </div>
+
+                <div class="fifth-section-detail-box-title">
+                    <h2>Thu hộ COD</h2>
+                </div>
+
+                <div class="fifth-section-detail-box-description">
+                    Khách hàng sẽ nhận bồi thường khi hàng hóa bị mất, thiếu hoặc hỏng hóc
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sixth-section">
+        <div class="section-title">
+            <h1>Hình ảnh nhà xe</h1>
+        </div>
+
+        <div class="sixth-section-image">
+            <img src="./Image/sixth_section_image1.png" alt="sixth-section-image1">
+            <img src="./Image/sixth_section_image2.png" alt="sixth-section-image2">
+            <img src="./Image/sixth_section_image3.png" alt="sixth-section-image3">
+            <img src="./Image/sixth_section_image4.png" alt="sixth-section-image4">
+            <img src="./Image/sixth_section_image5.png" alt="sixth-section-image5">
+            <img src="./Image/sixth_section_image6.png" alt="sixth-section-image6">
+        </div>
+    </div>
+
+    <div class="seventh-section">
+        <div class="seventh-section-detail">
+            <div class="seventh-section-detail-left">
+                <img src="./Image/hotline_dich_vu.png" alt="Hotline Dịch vụ">
+            </div>
+            <div class="seventh-section-detail-right">
+                <div class="seventh-section-detail-right-title">
+                    <h1>Hotline Dịch Vụ</h1>
+                </div>
+
+                <div class="seventh-section-detail-right-description">
+                    <p>Hotline dịch vụ của Mỹ Duyên hoạt động 24/7. Chúng tôi luôn sẵn sàng phục vụ khách hàng</p>
+                </div>
+
+                <div class="seventh-section-detail-right-phone">
+                    <div class="seventh-section-detail-right-phone-number">
+                        <p><i class="fa-solid fa-phone"></i> Hotline đặt vé: 1900 6746</p>
+                    </div>
+                    <div class="seventh-section-detail-right-phone-number">
+                        <p><i class="fa-solid fa-phone"></i> Hotline gửi hàng: 1900 0257</p>
+                    </div>
+                    <div class="seventh-section-detail-right-phone-number">
+                        <p><i class="fa-solid fa-phone"></i> Chăm sóc khách hàng: 1900 6746</p>
+                    </div>
+                    <div class="seventh-section-detail-right-phone-number">
+                        <p><i class="fa-solid fa-phone"></i> Xử lý khiếu nại: 02439 937 099</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="eighth-section">
+        <div class="section-title">
+            <h1>Tin tức nổi bật</h1>        
+        </div>
+
+        <div class="eighth-section-detail">
+            <div class="eighth-section-detail-left">
+                <div class="eighth-section-detail-left-image">
+                    <img src="./Image/thanh_da_va_vai_tro.png" alt="THAN ĐÁ VÀ VAI TRÒ TRONG NGÀNH CÔNG NGHIỆP ĐIỆN">
+                </div>
+
+                <div class="eighth-section-detail-left-title">
+                    <p>THAN ĐÁ VÀ VAI TRÒ TRONG NGÀNH CÔNG NGHIỆP ĐIỆN</p>
+                </div>
+
+                <div class="eighth-section-detail-left-description">
+                    <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam, đặc biệt là ngành công nghiệp điện, cơ sở phát triển nền công nghiệp hiện đại.</p>
+                </div>
+            </div>
+
+            <div class="eighth-section-detail-right">
+                <div class="eighth-section-detail-right-news">
+                    <div class="eighth-section-detail-right-news-image">
+                        <img src="./Image/cong_nghiep_dien1.png" alt="CÔNG NGHIỆP ĐIỆN 1">
+                    </div>
+                    <div class="eighth-section-detail-right-news-content">
+                        <div class="eighth-section-detail-right-news-title">
+                            <p>THAN ĐÁ VÀ VAI TRÒ TRONG NGÀNH CÔNG NGHIỆP ĐIỆN</p>
+                        </div>
+                        <div class="eighth-section-detail-right-news-description">
+                            <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam, đặc biệt là ngành...</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="eighth-section-detail-right-news">
+                    <div class="eighth-section-detail-right-news-image">
+                        <img src="./Image/cong_nghiep_dien2.png" alt="CÔNG NGHIỆP ĐIỆN 1">
+                    </div>
+                    <div class="eighth-section-detail-right-news-content">
+                        <div class="eighth-section-detail-right-news-title">
+                            <p>THAN ĐÁ VÀ VAI TRÒ TRONG NGÀNH CÔNG NGHIỆP ĐIỆN</p>
+                        </div>
+                        <div class="eighth-section-detail-right-news-description">
+                            <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam, đặc biệt là ngành...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="eighth-section-detail-right-news">
+                    <div class="eighth-section-detail-right-news-image">
+                        <img src="./Image/cong_nghiep_dien3.png" alt="CÔNG NGHIỆP ĐIỆN 1">
+                    </div>
+                    <div class="eighth-section-detail-right-news-content">
+                        <div class="eighth-section-detail-right-news-title">
+                            <p>THAN ĐÁ VÀ VAI TRÒ TRONG NGÀNH CÔNG NGHIỆP ĐIỆN</p>
+                        </div>
+                        <div class="eighth-section-detail-right-news-description">
+                            <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam, đặc biệt là ngành...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-detail">
+            <div class="footer-detail-left">
+                <div class="footer-detail-left-logo">
+                    <img src="./Image/footer_zalo.png" alt="Footer Logo">
+                </div>
+
+                <div class="footer-detail-title">
+                    <h3>CÔNG TY TNHH VẬN CHUYỂN HÀNH KHÁCH MỸ DUYÊN</h3>
+                </div>
+
+                <div class="footer-detail-description">
+                    <p>Giấy chứng nhận đăng ký DN số 0300993856</p>
+                    <p>Đại diện: Nguyễn Thị Mỹ Duyên</p>
+                </div>
+
+                <div class="footer-detail-title">
+                    <h3>Liên hệ</h3>
+                </div>
+
+                <div class="footer-detail-description">
+                    <p>Email: xekhachmyduyen0309@gmail.com</p>
+                    <p>Tổng đài: 02862 77 55 44 – 0903 861 192</p>
+                </div>
+
+                <div class="footer-detail-link">
+                    <a href="#"><i class="fa-brands fa-square-facebook" style="color: #63E6BE;"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube" style="color: #63E6BE;"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram" style="color: #63E6BE;"></i></a>
+                    <a href="#"><i class="fa-solid fa-z" style="color: #63E6BE;"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-detail-middle">
+                <div class="footer-detail-title">
+                    <h3>Khách hàng</h3>
+                </div>
+
+                <div class="footer-detail-description">
+                    <p>Đặt vé online</p>
+                    <p>Kiểm tra vé</p>
+                    <p>Tra cứu đơn hàng</p>
+                    <p>Chính sách vận chuyển</p>
+                    <p>Chính sách thanh toán</p>
+                    <p>Chính sách hủy vé/đổi trả</p>
+                    <p>Chính sách bảo mật thông tin</p>
+                    <p>Chính sách bảo mật thanh toán</p>
+                    <p>Chính sách xử lý khiếu nại</p>
+                </div>
+            </div>
+
+            <div class="footer-detail-right">
+                <div class="footer-detail-title">
+                    <h3><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> Tại Sóc Trăng</h3>
+                </div>
+
+                <div class="footer-detail-description">
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> Trụ sở: Bến xe Trần Đề 1/5, Thị trấn Trần Đề, Trần Đề</p>
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i>  VP Sóc Trăng: 38 Lê Duẩn, P. 3</p>
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i>  VP Long Phú: Ấp 14, đường Đoàn Thế Trung, TT. Long Phú</p>
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i>  VP Mỹ Tú: 170 ấp Ngoại Ô, TT. Huỳnh Hữu Nghĩa</p>
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i>  VP Đại Ngãi: Ấp Phụng Tường 2, Xã Long Phụng, Huyện Long Phú</p>
+                </div>
+
+                <div class="footer-detail-title">
+                    <h3><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> Tại Hậu Giang</h3>
+                </div>
+
+                <div class="footer-detail-description">
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> VP Ngã Bảy: Đường 3/2, Khu Vực 5, Phường Ngã Bảy, TP. Ngã Bảy</p>
+                </div>
+
+                <div class="footer-detail-title">
+                    <h3><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> Tại Cần Thơ</h3>
+                </div>
+
+                <div class="footer-detail-description">
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> Bến xe Cần Thơ: 91B Nguyễn Văn Linh, Hưng Lợi, Ninh Kiều, Cần Thơ</p>
+                </div>
+
+                <div class="footer-detail-title">
+                    <h3><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> Tại Sài Gòn</h3>
+                </div>
+
+                <div class="footer-detail-description">
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> Bến xe Miền Tây: Phòng vé 16/395 Kinh Dương Vương, P. An Lạc, Q. Bình Tân</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+                <div class="footer-copyright-date">
+                    <p>Copyright © 2024 My Duyen. Powered by HD Agency</p>
+                </div>
+
+                <div class="footer-copyright-policy">
+                    <a href="#">Website Terms of Use</a> |  <a href="#">Privacy policy</a>
+                </div>
+            </div>
+    
+
+</body>
+
+</html>

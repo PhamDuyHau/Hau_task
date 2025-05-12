@@ -1,0 +1,1064 @@
+/* Reset và layout cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 130px;
+    /* điều chỉnh đúng với chiều cao của navbar */
+    background-color: #F9F6EF;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    /* hoặc nền bạn đang dùng */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Top navbar */
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px 5px 60px;
+}
+
+.top-navbar img {
+    height: 80px;
+}
+
+.top-navbar .right-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-navbar .right-info a {
+    text-decoration: none;
+    background-color: red;
+    padding: 12px 18px;
+    border: 1px solid red;
+    color: white;
+    border-radius: 20px;
+    transition: 0.2s;
+    font-weight: 600;
+}
+
+.top-navbar .right-info a:hover {
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+}
+
+.top-navbar .right-info a.phone-number {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: 0.2s;
+    padding: 12px 18px;
+}
+
+.top-navbar .right-info a.phone-number:hover {
+    color: #007bff;
+    border-color: #007bff;
+    background-color: #e9f2ff;
+    /* soft light blue background */
+}
+
+.phone-number i {
+    margin-right: 6px;
+    color: black;
+}
+
+/* Bottom navbar */
+.bottom-navbar {
+    padding: 10px 0;
+}
+
+.bottom-navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 70px;
+}
+
+.bottom-navbar a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.bottom-navbar a.has-dropdown {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bottom-navbar a.has-dropdown::after {
+    content: "\f105";
+    /* Font Awesome: fa-angle-right */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 0.8em;
+}
+
+.bottom-navbar a:hover {
+    color: #007bff;
+    /* Change hover color to a light shade */
+}
+
+/* Dropdown container */
+li ul.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    list-style: none;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    min-width: 180px;
+    z-index: 1000;
+}
+
+/* Show dropdown on hover */
+li:hover ul.dropdown {
+    display: block;
+}
+
+/* Dropdown link styles */
+ul.dropdown li {
+    width: 100%;
+}
+
+ul.dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+    font-weight: normal;
+}
+
+/* Hover effect on dropdown links */
+ul.dropdown li a:hover {
+    background-color: #be0101;
+    /* red background */
+    color: white;
+}
+
+.container {
+    padding: 0px 70px 0px 70px;
+}
+
+.input-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: -60px;
+    /* Move it up */
+    position: relative;
+    z-index: 2;
+    /* Ensure it's on top of image */
+}
+
+.input-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 180px;
+}
+
+.input-item p {
+    font-weight: bold;
+    color: black;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.input-item input[type="text"] {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 8px 0;
+    font-size: 18px;
+    background-color: transparent;
+    transition: border-color 0.3s;
+}
+
+.input-item input[type="text"]:focus {
+    outline: none;
+    border-bottom-color: #be0101;
+}
+
+.input-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    color: #aaa;
+    font-size: 20px;
+    font-weight: bold;
+    border-left: 1px solid #ccc;
+}
+
+.input-submit {
+    align-self: flex-end;
+    padding-bottom: 20px;
+}
+
+.input-submit a {
+    background-color: #be0101;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.input-submit a:hover {
+    background-color: #a30000;
+}
+
+
+.main-image img {
+    width: 100%;
+    max-height: 500px;
+    display: block;
+    object-fit: cover;
+}
+
+.section-title {
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    color: #be0101;
+    padding-top: 60px;
+}
+
+.first-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* Cho phép các box xuống dòng khi không gian nhỏ */
+    padding: 60px 0px 0px 0px;
+    text-align: center;
+}
+
+.first-layout-box {
+    display: flex;
+    align-items: center;
+    /* Đảm bảo các phần tử trong box được canh chỉnh theo chiều dọc */
+    width: calc(24% - 5px);
+    /* 4 boxes per row with spacing */
+    height: 166px;
+    background-color: #386fcf;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    /* Khoảng cách giữa hình ảnh và nội dung */
+}
+
+.first-layout-box-color-1 {
+    background: linear-gradient(to bottom right,
+            #16469b,
+            #386fcf);
+    /* Gradient from top left to bottom right */
+}
+
+.first-layout-box-color-2 {
+    background: linear-gradient(to bottom right,
+            #2e566e,
+            #4aba8d);
+    /* Gradient from top left to bottom right */
+}
+
+.first-layout-box-color-3 {
+    background: linear-gradient(to bottom right,
+            #288ea8,
+            #60c7e0);
+    /* Gradient from top left to bottom right */
+}
+
+.first-layout-box-color-4 {
+    background: linear-gradient(to bottom right,
+            #d88616,
+            #fea731);
+    /* Gradient from top left to bottom right */
+}
+
+.first-layout-box div {
+    text-align: left;
+    /* Aligns h5 and p text to the left */
+}
+
+.first-layout-box img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.first-layout-box h5 {
+    margin: 0;
+    /* Loại bỏ khoảng cách mặc định */
+    font-size: 18px;
+    color: white;
+}
+
+.first-layout-box p {
+    margin-top: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+.second-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 60px 0px 180px 0px;
+}
+
+.second-layout-box {
+    width: calc(25% - 15px);
+    /* 4 boxes per row with spacing */
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+.second-layout-box-title img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.second-layout-box-main,
+.second-layout-box-end {
+    padding: 15px;
+}
+
+.second-layout-box-main-city p,
+.second-layout-box-main-price p,
+.second-layout-box-end-time p {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.second-layout-box-end-detail p {
+    background-color: #d9d9d9;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px 12px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    display: inline-block;
+    width: 100%;
+}
+
+.second-layout-box-end-detail p i,
+.second-layout-box-end-time p i {
+    margin-right: 6px;
+    color: black;
+}
+
+.second-layout-box-end-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Canh nút trên cùng dòng với “Khoảng cách” */
+    margin-top: 10px;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.second-layout-box-end-time .time-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.second-layout-box-end-time a {
+    padding: 12px 30px;
+    background-color: #ed2625;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-top: 10px;
+    /* Đảm bảo không bị lệch xuống */
+}
+
+.second-layout-box-end-time a:hover {
+    background-color: #940000;
+}
+
+.second-layout-box-main-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.second-layout-box-main-city {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* hoặc center nếu bạn muốn canh giữa */
+}
+
+.second-layout-box-main-city p {
+    margin: 2px 0;
+    font-size: 14px;
+}
+
+.arrows-icon {
+    padding-left: 2px;
+    width: 100%;
+}
+
+.arrows-icon i {
+    color: black;
+}
+
+.second-layout-box-main-city i.fa-circle-up,
+.second-layout-box-main-city i.fa-circle-down {
+    color: #f48124;
+    /* Set both circles to the color you want */
+}
+
+.third-section {
+    display: flex;
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    padding: 50px 120px 50px 120px;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #2e3192;
+    position: relative;
+    /* Để hỗ trợ định vị các phần tử con */
+}
+
+.third-section-left {
+    flex: 1;
+    min-width: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    font-size: larger;
+}
+
+.third-section-left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Căn trái các phần tử */
+    gap: 10px;
+    /* Khoảng cách giữa các phần tử */
+}
+
+.third-section-left-main-title {
+    font-weight: 600;
+}
+
+.third-section-left-main-title,
+.third-section-left-description {
+    width: 100%;
+    /* Đảm bảo các phần tử chiếm toàn bộ chiều rộng */
+    text-align: center;
+    /* Căn trái nội dung */
+}
+
+.third-section-left-small-title {
+    margin-top: 20px;
+    text-align: center;
+    /* Giữ căn giữa nếu cần */
+}
+
+.third-section-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    overflow: visible;
+    position: relative;
+}
+
+/* Điều chỉnh hình ảnh phone_left.png */
+.third-section-right-phone-image-left {
+    position: absolute;
+    top: -330px;
+    /* Đưa ảnh lên trên */
+    left: -50px;
+    /* Đưa ảnh sang bên trái */
+    max-width: 350px;
+    /* Giới hạn chiều rộng ảnh */
+    z-index: 1;
+    /* Đảm bảo ảnh nằm trên phần tử khác */
+}
+
+/* Giới hạn chiều rộng ảnh */
+.third-section-right-phone-image-left img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Điều chỉnh hình ảnh bên phải */
+.third-section-right-phone-image-right {
+    position: absolute;
+    bottom: -264px;
+    /* Đặt hình ảnh sát dưới đáy của .third-section */
+    right: 140px;
+    max-width: 250px;
+}
+
+.third-section-right-phone-image-right img {
+    width: 150%;
+    height: auto;
+    display: block;
+}
+
+.fourth-section {
+    padding: 0px 0px 60px 0px;
+}
+
+.fourth-section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.fourth-section-box {
+    display: flex;
+    justify-content: space-between;
+    /* căn đều 3 box */
+    gap: 30px;
+    /* khoảng cách giữa các box */
+    flex-wrap: wrap;
+    /* đảm bảo hiển thị tốt trên màn hình nhỏ */
+}
+
+.fourth-section-detail {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.fourth-section-detail-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.fourth-section-detail-title p {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0;
+}
+
+.fourth-section-detail-description p,
+.fourth-section-detail-noted p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+hr {
+    border: none;
+    height: 3px;
+    width: 60%;
+    /* Adjust this to control the length */
+    background-color: #BE0101;
+    margin: 10px 0 10px 0;
+    /* top, right, bottom, left */
+}
+
+.fourth-section-detail-noted i {
+    color: red;
+    /* Make icon red */
+    font-size: 30px;
+    /* Adjust size as needed */
+    margin-right: 8px;
+    /* Add some space between icon and text */
+}
+
+.fourth-section-detail-noted p {
+    display: flex;
+    align-items: center;
+}
+
+/* fifth-section */
+.fifth-section {
+    background-color: #D2171E;
+    background-image: url('../Image/fifth_section_background_image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 60px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.fifth-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(212, 0, 7, 0.7);
+    /* red overlay with transparency */
+    z-index: 0;
+}
+
+.fifth-section-title,
+.fifth-section-detail {
+    position: relative;
+    z-index: 2;
+}
+
+.fifth-section-title h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 50px;
+}
+
+.fifth-section-detail {
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.fifth-section-detail-box {
+    position: relative;
+    /* Needed for positioning the image absolutely inside */
+    background-color: transparent;
+    /* Make it see-through */
+    border: none;
+    /* Remove full border */
+    width: 420px;
+    padding: 20px 20px 70px 20px;
+    text-align: center;
+    padding-top: 50px;
+    /* Add top padding to make space for the image */
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+/* Add custom top-left and top-right border using ::before and ::after */
+.fifth-section-detail-box::before,
+.fifth-section-detail-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 3px;
+    background-color: white;
+    width: 28%;
+    /* 25% width on both sides */
+}
+
+.fifth-section-detail-box::before {
+    left: 0;
+}
+
+.fifth-section-detail-box::after {
+    right: 0;
+}
+
+/* Optional side and bottom border */
+.fifth-section-detail-box {
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    border-radius: 0 0 10px 10px;
+}
+
+.fifth-section-detail-box-image1 {
+    position: absolute;
+    top: -100px;
+    /* Moves the image upward, over the border */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fifth-section-detail-box-image2 {
+    position: absolute;
+    top: -73px;
+    /* Moves the image upward, over the border */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fifth-section-detail-box-image3 {
+    position: absolute;
+    top: -72px;
+    /* Moves the image upward, over the border */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fifth-section-detail-box-title h2 {
+    margin: 25px 0;
+    color: white;
+}
+
+.fifth-section-detail-box-description {
+    color: white;
+    font-size: 16px;
+}
+
+.sixth-section {
+    padding: 0px 0px 60px 0px;
+    text-align: center;
+}
+
+.sixth-section-image {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    /* Spread images evenly */
+    align-items: center;
+    width: 100%;
+    /* Take up full width */
+}
+
+.sixth-section-image img {
+    width: calc(100% / 6 - 20px);
+    /* Make images take equal space with a small gap */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    /* Ensures images maintain aspect ratio */
+}
+
+.seventh-section {
+    padding: 70px 40px 100px;
+    position: relative;
+    /* Needed for absolute positioning of the image */
+    margin: 50px 0px 50px 0px;
+}
+
+.seventh-section-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.seventh-section-detail-left {
+    flex: 3;
+    /* Give more space to the left section (image) */
+    padding-left: 160px;
+    text-align: center;
+    margin-bottom: 20px;
+    /* Ensure there’s space below the image on smaller screens */
+    position: relative;
+    /* Needed for absolute positioning of the image inside */
+}
+
+.seventh-section-detail-left img {
+    position: absolute;
+    /* Position the image absolutely inside the container */
+    bottom: -371px;
+    /* Stick the image to the bottom */
+    left: 50%;
+    /* Center the image horizontally */
+    transform: translateX(-50%);
+    /* Adjust for centering */
+    width: 100%;
+    max-width: 700px;
+    /* Limit the image size */
+    height: auto;
+    object-fit: cover;
+}
+
+.seventh-section-detail-right {
+    flex: 2;
+    padding-left: 20px;
+    padding-right: 40px;
+}
+
+.seventh-section-detail-right-title h1 {
+    font-size: 48px;
+    color: #be0101;
+    margin-bottom: 20px;
+}
+
+.seventh-section-detail-right-description p {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.seventh-section-detail-right-phone {
+    font-size: 16px;
+    color: #333;
+    line-height: 3.0;
+}
+
+.seventh-section-detail-right-phone-number p {
+    margin-bottom: 20px;
+}
+
+.seventh-section-detail-right-phone-number i {
+    padding-left: 10px;
+    margin-right: 20px;
+    color: #2E3192;
+    transform: scale(2.0);
+    /* This will scale the icon 1.5 times larger */
+}
+
+.eighth-section {
+    padding: 0px 40px;
+    background-color: white;
+}
+
+.eighth-section-detail {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.eighth-section-detail-left,
+.eighth-section-detail-right {
+    flex: 1;
+    /* Both sections will take equal width */
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.eighth-section-detail-left {
+    padding-right: 30px;
+}
+
+.eighth-section-detail-left-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.eighth-section-detail-left-title p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+.eighth-section-detail-left-description p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.eighth-section-detail-right {
+    flex: 1;
+    /* Same as left section */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.eighth-section-detail-right-news {
+    display: flex;
+    flex-direction: row;
+    /* Changed from column to row */
+    gap: 15px;
+    border-radius: 8px;
+    align-items: flex-start;
+}
+
+.eighth-section-detail-right-news-image img {
+    width: 240px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.eighth-section-detail-right-news-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.eighth-section-detail-right-news-title p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2E3192;
+    margin-top: 30px;
+}
+
+.eighth-section-detail-right-news-description p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+.footer {
+    position: relative;
+    background-color: #b30000;
+    background-image: url('../Image/fifth_section_background_image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 60px 120px;
+    color: white;
+    z-index: 1;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(179, 0, 0, 0.7);
+    /* Red overlay, similar to .fifth-section */
+    z-index: 0;
+}
+
+.footer * {
+    position: relative;
+    z-index: 2;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffd1d1;
+    text-decoration: underline;
+}
+
+.footer-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-detail-left,
+.footer-detail-middle,
+.footer-detail-right {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-detail-middle {
+    padding-left: 70px;
+}
+
+.footer-detail-left-logo img {
+    width: 160px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footer-detail-title h3 {
+    font-size: 18px;
+    margin: 20px 0 10px;
+    color: white;
+}
+
+.footer-detail-description p {
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 2.0;
+    color: #f8f8f8;
+}
+
+.footer-detail-link {
+    margin-top: 15px;
+}
+
+.footer-detail-link a {
+    margin-right: 10px;
+    font-size: 22px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.footer-detail-link a:hover {
+    transform: scale(1.2);
+}
+
+.footer-detail-description i {
+    margin-right: 8px;
+    color: #ffffff;
+}
+
+.footer-copyright {
+    border-top: 2px solid #ED151D;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ED151D;
+    box-shadow: 0px 0px 0 2px #ED151D inset;
+    border-radius: 1px;
+}
+
+.footer-copyright-date,
+.footer-copyright-policy {
+    font-size: 13px;
+    color: white;
+    padding: 0px 100px;
+}
+
+.footer-copyright-policy a {
+    margin: 0 8px;
+    color: white;
+}
