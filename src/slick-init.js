@@ -51,6 +51,16 @@ $(document).ready(function () {
     `;
     $('<style>').text(customStyles).appendTo('head');
 
+    // Initialize Flatpickr for date inputs
+    flatpickr("#start-date", {
+        dateFormat: "d.m.Y", // This is to match the "12.11.2024" format
+        allowInput: true // Allow user to manually input date
+    });
+
+    flatpickr("#end-date", {
+        dateFormat: "d.m.Y",
+        allowInput: true
+    });
 
 
     // Handle bottom navbar dropdown toggle for mobile
