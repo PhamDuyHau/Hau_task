@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    padding-top: 130px;
+    padding-top: 110px;
     /* điều chỉnh đúng với chiều cao của navbar */
     background-color: #F9F6EF;
 }
@@ -79,6 +79,39 @@ body {
     margin-right: 6px;
     color: black;
 }
+
+@media (max-width: 1024px) {
+  .top-navbar {
+    padding: 10px 30px;
+    flex-direction: row; /* ✅ Keep row direction */
+    gap: 0;
+    align-items: center;
+  }
+
+  .top-navbar img {
+    height: 60px;
+  }
+
+  .top-navbar .right-info {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .top-navbar .right-info a {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+
+/* Responsive - Hide top navbar on mobile */
+@media (max-width: 768px) {
+    .top-navbar {
+        display: none;
+    }
+}
+
 
 /* Bottom navbar */
 .bottom-navbar {
@@ -155,6 +188,103 @@ ul.dropdown li a:hover {
     /* red background */
     color: white;
 }
+
+/* Responsive for tablet */
+@media (max-width: 1024px) {
+    .bottom-navbar ul {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .bottom-navbar a {
+        font-size: 15px;
+    }
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .bottom-navbar {
+        padding: 10px;
+    }
+
+    .bottom-navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .bottom-navbar a {
+        font-size: 14px;
+    }
+
+    ul.dropdown {
+        position: relative;
+        box-shadow: none;
+        min-width: auto;
+        width: 100%;
+    }
+
+    ul.dropdown li a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    li:hover ul.dropdown {
+        display: none;
+    }
+
+    /* Allow clicking to open dropdown on mobile */
+    .bottom-navbar li.open>ul.dropdown {
+        display: block;
+    }
+}
+
+/* Default, hide bottom navbar on mobile */
+.bottom-navbar-wrapper {
+    display: block;
+}
+
+/* Hide on small screens (mobile only) */
+@media (max-width: 768px) {
+    .bottom-navbar-wrapper {
+        display: none;
+    }
+
+    .bottom-navbar-wrapper.active {
+        display: block;
+    }
+}
+
+/* Show bottom navbar when hamburger icon is clicked */
+.mobile-menu-toggle {
+    display: none;
+    /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+        /* Show hamburger menu on mobile */
+    }
+
+    /* Show the navbar when active */
+    .bottom-navbar-wrapper.active {
+        display: block;
+    }
+
+    /* Adjust the bottom navbar's look for mobile */
+    .bottom-navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-navbar a {
+        font-size: 14px;
+    }
+}
+
 
 .container {
     padding: 0px 70px 0px 70px;
@@ -236,12 +366,106 @@ ul.dropdown li a:hover {
     background-color: #a30000;
 }
 
+@media (max-width: 1024px) {
+    .input-box {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    /* Hide separators */
+    .input-separator {
+        display: none;
+    }
+
+    /* Ensure each input-item has proper size */
+    .input-item {
+        flex: 1 1 45%;
+        min-width: 45%;
+    }
+
+    /* Correct ordering explicitly */
+    .input-come {
+        order: 1;
+    }
+
+    .input-to-location {
+        order: 2;
+    }
+
+    .input-from {
+        order: 3;
+    }
+
+    .input-to-date {
+        order: 4;
+    }
+
+    .input-submit {
+        order: 5;
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+    .input-box {
+        flex-direction: column;
+        padding: 16px;
+        gap: 12px;
+        position: relative;
+        top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .input-come {
+        order: 1;
+    }
+
+    .input-destination {
+        order: 2;
+    }
+
+    .input-date-from {
+        order: 3;
+    }
+
+    .input-date-to {
+        order: 4;
+    }
+
+    .input-submit {
+        order: 5;
+        align-self: center;
+        width: 100%;
+    }
+}
 
 .main-image img {
     width: 100%;
     max-height: 500px;
     display: block;
     object-fit: cover;
+}
+
+/* Make the image position absolute on mobile */
+@media (max-width: 768px) {
+    .main-image img {
+        position: absolute;
+        top:0; /* Make the image sit right at the top */
+        left: 0; /* Align it to the left */
+        width: 100%; /* Ensure the image is full width */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Keep image quality intact */
+        z-index: -1; /* Place the image behind the navbar */
+    }
+
+    
 }
 
 .section-title {
@@ -329,12 +553,92 @@ ul.dropdown li a:hover {
     font-size: 14px;
 }
 
+/* Responsive for tablets */
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 20px;
+        padding-top: 40px;
+    }
+
+    .first-layout-box {
+        width: calc(48% - 10px); /* 2 boxes per row */
+        margin-bottom: 20px;
+    }
+
+    .first-section {
+        justify-content: space-between;
+        padding: 40px 10px 0px 10px;
+    }
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 18px;
+        padding-top: 30px;
+    }
+
+    .first-layout-box {
+        width: 100%;
+        margin-bottom: 16px;
+        flex-direction: column; 
+        align-items: center;    
+        justify-content: center; 
+        text-align: center; 
+        
+    }
+
+    .first-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 16px 0px 16px;
+        
+    }
+
+    .first-layout-box div {
+        text-align: center; /* Optional: center content on mobile */
+    }
+}
+
+
 .second-layout {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
-    padding: 60px 0px 180px 0px;
+    padding: 60px 0px 40px 0px;
+}
+
+.second-section {
+    width: 100%;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.slick-slider .slick-slide {
+    margin: 0 10px;
+}
+
+.second-layout-box {
+    min-width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.second-layout-box-title img {
+    max-width: 100%;
+}
+
+/* Make slick dots bigger */
+.slick-dots li button:before {
+    font-size: 20px;
+    /* Default is 6px or 12px depending on theme */
+    color: #000;
+    /* Change color if needed */
 }
 
 .second-layout-box {
@@ -346,7 +650,6 @@ ul.dropdown li a:hover {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
 }
 
 .second-layout-box-title img {
@@ -453,19 +756,43 @@ ul.dropdown li a:hover {
     /* Set both circles to the color you want */
 }
 
+
+/* Default Slick arrows styles */
+.slick-prev, .slick-next {
+    display: block; /* Ensure they are initially visible on full screen */
+    visibility: visible;
+}
+
+/* Hide arrows on tablets and mobile */
+@media (max-width: 1025px) {
+    .slick-prev, .slick-next {
+        display: none; /* Hide arrows on tablet */
+    }
+}
+
+/* Hide arrows on mobile */
+@media (max-width: 768px) {
+    .slick-prev, .slick-next {
+        display: none; /* Hide arrows on mobile */
+    }
+}
+
+
+
 .third-section {
+    background-color: #2e3192;
+    padding: 50px 120px;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
-    /* Căn giữa theo chiều ngang */
     align-items: center;
-    /* Căn giữa theo chiều dọc */
-    padding: 50px 120px 50px 120px;
     flex-wrap: wrap;
     gap: 20px;
-    background-color: #2e3192;
     position: relative;
-    /* Để hỗ trợ định vị các phần tử con */
+    clip-path: url("clip-paths.svg#curveTopLeft");
 }
+
+
 
 .third-section-left {
     flex: 1;
@@ -517,24 +844,17 @@ ul.dropdown li a:hover {
     position: relative;
 }
 
-/* Điều chỉnh hình ảnh phone_left.png */
-.third-section-right-phone-image-left {
+.floating-phone-left {
     position: absolute;
-    top: -330px;
-    /* Đưa ảnh lên trên */
-    left: -50px;
-    /* Đưa ảnh sang bên trái */
+    top: 1790px;
+    right: 450px;
     max-width: 350px;
-    /* Giới hạn chiều rộng ảnh */
-    z-index: 1;
-    /* Đảm bảo ảnh nằm trên phần tử khác */
+    z-index: 2;
 }
 
-/* Giới hạn chiều rộng ảnh */
-.third-section-right-phone-image-left img {
+.floating-phone-left img {
     width: 100%;
     height: auto;
-    object-fit: contain;
 }
 
 /* Điều chỉnh hình ảnh bên phải */
@@ -550,6 +870,54 @@ ul.dropdown li a:hover {
     width: 150%;
     height: auto;
     display: block;
+}
+
+/* Media queries to hide images on tablet and mobile */
+@media (max-width: 1024px) {
+    /* Hide floating phone image on the left */
+    .floating-phone-left {
+        display: none;
+    }
+
+    /* Hide the phone image on the right */
+    .third-section-right-phone-image-right {
+        display: none;
+    }
+
+    /* Center third-section-left content on tablet */
+    .third-section-left {
+        flex: 1 1 100%; /* Ensure it takes full width on smaller screens */
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+}
+
+/* For mobile (<= 768px), keep it centered */
+@media (max-width: 768px) {
+    /* Adjust third-section's padding and layout for mobile */
+    .third-section {
+        padding: 30px 20px;
+    }
+
+    /* Hide phone images for mobile as well */
+    .floating-phone-left {
+        display: none;
+    }
+
+    .third-section-right-phone-image-right {
+        display: none;
+    }
+
+    /* Ensure third-section-left stays centered */
+    .third-section-left {
+        flex: 1 1 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
 }
 
 .fourth-section {
@@ -622,6 +990,63 @@ hr {
     display: flex;
     align-items: center;
 }
+
+/* Đối với màn hình có chiều rộng tối đa 1024px */
+@media (max-width: 1024px) {
+    .fourth-section-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center; /* canh giữa các box nếu xuống hàng */
+    }
+
+    .fourth-section-detail {
+        flex: 1 1 calc(50% - 20px); /* 2 cột mỗi hàng */
+        max-width: calc(50% - 20px);
+    }
+
+    .fourth-section-detail-title p {
+        font-size: 26px;
+    }
+
+    .fourth-section-detail-description p,
+    .fourth-section-detail-noted p {
+        font-size: 16px;
+    }
+}
+
+/* Đối với màn hình có chiều rộng tối đa 768px */
+@media (max-width: 768px) {
+    .fourth-section-box {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .fourth-section-detail {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .fourth-section-detail-title p {
+        font-size: 22px;
+    }
+
+    .fourth-section-detail-description p,
+    .fourth-section-detail-noted p {
+        font-size: 15px;
+    }
+
+    .fourth-section-detail-noted i {
+        font-size: 24px;
+    }
+
+    hr {
+        width: 80%;
+        height: 2px;
+    }
+}
+
 
 /* fifth-section */
 .fifth-section {
@@ -709,7 +1134,7 @@ hr {
     border-left: 3px solid white;
     border-right: 3px solid white;
     border-bottom: 3px solid white;
-    border-radius: 0 0 10px 10px;
+
 }
 
 .fifth-section-detail-box-image1 {
@@ -722,7 +1147,7 @@ hr {
 
 .fifth-section-detail-box-image2 {
     position: absolute;
-    top: -73px;
+    top: -60px;
     /* Moves the image upward, over the border */
     left: 50%;
     transform: translateX(-50%);
@@ -745,6 +1170,94 @@ hr {
     color: white;
     font-size: 16px;
 }
+
+/* MÁY TÍNH BẢNG - tối đa 1024px */
+@media (max-width: 1024px) {
+    .fifth-section {
+        padding: 40px 30px;
+    }
+
+    .fifth-section-title h1 {
+        font-size: 40px;
+    }
+
+    .fifth-section-detail {
+        gap: 40px;
+        padding-top: 70px;
+    }
+
+    .fifth-section-detail-box {
+        width: 45%;
+        padding: 20px 20px 60px 20px;
+    }
+
+    .fifth-section-detail-box-title h2 {
+        font-size: 22px;
+    }
+
+    .fifth-section-detail-box-description {
+        font-size: 15px;
+    }
+
+    /* Giảm kích thước hình ảnh nếu cần */
+    .fifth-section-detail-box-image1 img,
+    .fifth-section-detail-box-image2 img,
+    .fifth-section-detail-box-image3 img {
+        width: 120px;
+    }
+
+    .fifth-section-detail-box:nth-child(3) {
+    margin-top: 40px; /* Tạo khoảng cách hàng trên và hàng dưới */
+}
+}
+
+/* ĐIỆN THOẠI - tối đa 768px */
+@media (max-width: 768px) {
+    .fifth-section {
+        padding: 30px 20px;
+    }
+
+    .fifth-section-title h1 {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    .fifth-section-detail {
+        flex-direction: column;
+        gap: 50px;
+        padding-top: 40px;
+        align-items: center;
+    }
+
+    .fifth-section-detail-box {
+        width: 100%;
+        padding: 20px 15px 50px 15px;
+    }
+
+    .fifth-section-detail-box-title h2 {
+        font-size: 20px;
+    }
+
+    .fifth-section-detail-box-description {
+        font-size: 14px;
+    }
+
+    .fifth-section-detail-box-image1 img,
+    .fifth-section-detail-box-image2 img,
+    .fifth-section-detail-box-image3 img {
+        width: 100px;
+    }
+
+    /* Giảm khoảng cách top của hình ảnh nếu nó lấn quá nhiều */
+    .fifth-section-detail-box-image1,
+    .fifth-section-detail-box-image3 {
+        top: -70px;
+    }
+    .fifth-section-detail-box-image2{
+        top: -30px;
+    }
+}
+
 
 .sixth-section {
     padding: 0px 0px 60px 0px;
@@ -770,6 +1283,27 @@ hr {
     object-fit: cover;
     /* Ensures images maintain aspect ratio */
 }
+
+/* Tablet: hiển thị 3 ảnh mỗi hàng */
+@media (max-width: 1024px) {
+    .sixth-section-image img {
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: calc(33.33% - 20px);
+    }
+}
+
+/* Mobile: hiển thị 2 ảnh mỗi hàng */
+@media (max-width: 768px) {
+    .sixth-section-image img {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+
+    .sixth-section {
+        padding: 0 20px 40px 20px;
+    }
+}
+
 
 .seventh-section {
     padding: 70px 40px 100px;
@@ -848,6 +1382,68 @@ hr {
     transform: scale(2.0);
     /* This will scale the icon 1.5 times larger */
 }
+
+@media (max-width: 1024px) {
+    .seventh-section {
+        padding: 0px 0px ;
+
+    }
+
+    .seventh-section-detail-left img {
+        max-width: 500px;
+        bottom: -280px;
+    }
+
+    /* Move .detail-right further left by reducing side paddings */
+    .seventh-section-detail-right {
+        padding-left: 0;
+        padding-right: 20px;
+    }
+
+    /* Optional: shrink font a bit */
+    .seventh-section-detail-right-title h1 {
+        font-size: 38px;
+    }
+
+    .seventh-section-detail {
+        gap: 30px; /* Add some spacing if needed */
+    }
+}
+
+
+/* Mobile: hide image */
+@media (max-width: 768px) {
+    .seventh-section-detail-left img {
+        display: none;
+    }
+
+    .seventh-section-detail-left {
+        padding-left: 0;
+    }
+
+    .seventh-section {
+        padding: 40px 20px;
+    }
+
+    .seventh-section-detail {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .seventh-section-detail-right {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .seventh-section-detail-right-title h1 {
+        font-size: 32px;
+    }
+
+    .seventh-section-detail-right-description p {
+        font-size: 16px;
+    }
+}
+
 
 .eighth-section {
     padding: 0px 40px;
@@ -940,6 +1536,127 @@ hr {
     line-height: 1.5;
     margin-top: 15px;
 }
+
+@media (max-width: 1024px) {
+    .eighth-section-detail {
+        flex-direction: column;
+    }
+
+    .eighth-section-detail-left,
+    .eighth-section-detail-right {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    /* Make the right section grid for two columns */
+    .eighth-section-detail-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px; /* Space between the two columns */
+        padding: 0; /* Reset any unnecessary padding */
+    }
+
+    /* Each news item on the right */
+    .eighth-section-detail-right-news {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        border-radius: 8px;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+
+    .eighth-section-detail-right-news-image img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+
+    .eighth-section-detail-right-news-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    /* Apply ellipsis for title and description */
+    .eighth-section-detail-right-news-title p,
+    .eighth-section-detail-right-news-description p {
+        font-size: 16px;
+        margin-top: 10px;
+        color: #333;
+        white-space: nowrap;  /* Prevent wrapping */
+        overflow: hidden;  /* Hide overflowed text */
+        text-overflow: ellipsis; /* Display ellipsis when text overflows */
+    }
+
+    /* Title specific styles */
+    .eighth-section-detail-right-news-title p {
+        font-weight: bold;
+        color: #2E3192;
+    }
+
+    /* Description specific styles */
+    .eighth-section-detail-right-news-description p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+    }
+
+    /* Ensure the grid does not cause overflow */
+    .eighth-section-detail-right-news {
+        width: 100%; /* Ensure each item takes full width within the grid */
+    }
+
+    /* For smaller screens, allow the content to wrap naturally in the second column */
+    .eighth-section-detail-right-news-content {
+        width: 100%;
+    }
+}
+
+
+ @media (max-width: 768px) {
+    .eighth-section-detail-right {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .eighth-section-detail-right-news {
+        flex-direction: column; /* Stack news items vertically */
+        width: 100%;
+        align-items: center; /* Center the news items horizontally */
+        justify-content: center; /* Center the news items vertically */
+        text-align: center; /* Ensure text is centered inside the news items */
+    }
+
+    .eighth-section-detail-right-news-image img {
+        max-width: 100%; /* Make images fit on small screens */
+        margin: 0 auto; /* Center the image */
+    }
+
+    .eighth-section-detail-right-news-content {
+        width: 100%;
+        text-align: center; /* Center the text in the content */
+    }
+
+    /* Reduce font size for phone */
+    .eighth-section-detail-right-news-title p {
+        font-size: 14px;
+        margin-top: 10px;
+        text-align: center; /* Ensure the title is centered */
+    }
+
+    .eighth-section-detail-right-news-description p {
+        font-size: 12px;
+        text-align: center; /* Ensure the description is centered */
+    }
+}
+
+
+
 
 .footer {
     position: relative;
@@ -1039,6 +1756,86 @@ hr {
     color: #ffffff;
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 40px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .footer-detail {
+        flex-direction: column; /* Stack footer items vertically */
+        align-items: center; /* Center the footer content */
+        gap: 20px; /* Reduced gap for smaller screens */
+    }
+
+    .footer-detail-left,
+    .footer-detail-middle,
+    .footer-detail-right {
+        width: 100%; /* Each section takes full width */
+        text-align: center; /* Center content */
+    }
+
+    .footer-detail-middle {
+        padding-left: 0px;
+    }
+
+    .footer-detail-left-logo img {
+        width: 120px; /* Resize logo for smaller screens */
+    }
+
+    .footer-detail-title h3 {
+        font-size: 16px; /* Slightly smaller text */
+    }
+
+    .footer-detail-description p {
+        font-size: 13px; /* Smaller text for better readability */
+        line-height: 1.6; /* Adjust line-height for better spacing */
+    }
+
+    .footer-detail-link a {
+        font-size: 20px; /* Adjust icon size */
+        margin-right: 5px; /* Reduced margin between icons */
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 20px; /* Adjust padding for mobile screens */
+    }
+
+    .footer-detail {
+        flex-direction: column; /* Stack footer items vertically */
+        align-items: center; /* Center the footer content */
+        gap: 20px; /* Reduced gap for smaller screens */
+    }
+
+    .footer-detail-left,
+    .footer-detail-middle,
+    .footer-detail-right {
+        width: 100%; /* Each section takes full width */
+        text-align: center; /* Center content */
+    }
+
+    .footer-detail-left-logo img {
+        width: 120px; /* Resize logo for smaller screens */
+    }
+
+    .footer-detail-title h3 {
+        font-size: 16px; /* Slightly smaller text */
+    }
+
+    .footer-detail-description p {
+        font-size: 13px; /* Smaller text for better readability */
+        line-height: 1.6; /* Adjust line-height for better spacing */
+    }
+
+    .footer-detail-link a {
+        font-size: 20px; /* Adjust icon size */
+        margin-right: 5px; /* Reduced margin between icons */
+    }
+}
+
 .footer-copyright {
     border-top: 2px solid #ED151D;
     padding: 20px;
@@ -1061,4 +1858,41 @@ hr {
 .footer-copyright-policy a {
     margin: 0 8px;
     color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .footer-copyright {
+        padding: 20px 10px;
+        flex-direction: column; /* Stack the content vertically */
+        align-items: center; /* Center content */
+    }
+
+    .footer-copyright-date,
+    .footer-copyright-policy {
+        padding: 0 20px; /* Reduced padding for mobile */
+        text-align: center; /* Center the text */
+    }
+
+    .footer-copyright-policy a {
+        margin: 0 5px; /* Reduced margin between links */
+    }
+}
+
+/* Mobile Responsiveness for 768px and below */
+@media (max-width: 768px) {
+    .footer-copyright {
+        padding: 15px 10px; /* Further reduced padding */
+    }
+
+    .footer-copyright-date,
+    .footer-copyright-policy {
+        font-size: 12px; /* Smaller font size for mobile */
+        padding: 0 15px; /* Even smaller padding */
+        text-align: center; /* Ensure everything is centered */
+    }
+
+    .footer-copyright-policy a {
+        margin: 0 5px; /* Reduced spacing between links */
+    }
 }

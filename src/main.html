@@ -6,11 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- jQuery and Slick JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="slick-init.js"></script>
+
+
     <title>Navbar Layout</title>
-    
+
+
 </head>
 
 <body>
+
     <div class="header">
         <!-- Top Navbar -->
         <div class="top-navbar">
@@ -30,40 +44,47 @@
             </div>
         </div>
 
-        <!-- Bottom Navbar -->
-
-        <div class="bottom-navbar">
-            <ul>
-                <li><a href="#" class="has-dropdown">Trang chủ</a></li>
-                <li>
-                    <a href="#" class="has-dropdown">Giới thiệu</a>
-                    <ul class="dropdown">
-                        <li><a href="#">VỀ CHÚNG TÔI</a></li>
-                        <li><a href="#">HỆ THỐNG VĂN PHÒNG</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="has-dropdown">Dịch vụ</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Dịch vụ A</a></li>
-                        <li><a href="#">Dịch vụ B</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="has-dropdown">TRA CỨU</a>
-                    <ul class="dropdown">
-                        <li><a href="#">TRA CỨU VỀ</a></li>
-                        <li><a href="#">TRA CỨU ĐƠN HÀNG</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Tin tức</a></li>
-                <li><a href="#">Liên hệ</a></li>
-                <li><a href="#">Tuyển dụng</a></li>
-                <li>
-                    <a href="#"><i class="fas fa-search search-icon"></i></a>
-                </li>
-            </ul>
+        <!-- Hamburger Menu for Mobile -->
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
         </div>
+
+        <!-- Bottom Navbar Wrapper for Mobile -->
+        <div class="bottom-navbar-wrapper">
+            <div class="bottom-navbar">
+                <ul>
+                    <li><a href="#" class="has-dropdown">Trang chủ</a></li>
+                    <li>
+                        <a href="#" class="has-dropdown">Giới thiệu</a>
+                        <ul class="dropdown">
+                            <li><a href="#">VỀ CHÚNG TÔI</a></li>
+                            <li><a href="#">HỆ THỐNG VĂN PHÒNG</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="has-dropdown">Dịch vụ</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Dịch vụ A</a></li>
+                            <li><a href="#">Dịch vụ B</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="has-dropdown">TRA CỨU</a>
+                        <ul class="dropdown">
+                            <li><a href="#">TRA CỨU VỀ</a></li>
+                            <li><a href="#">TRA CỨU ĐƠN HÀNG</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li>
+                        <a href="#"><i class="fas fa-search search-icon"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 
     <div class="main-image">
@@ -74,25 +95,25 @@
     <div class="container">
 
         <div class="input-box">
-            <div class="input-item">
+            <div class="input-item input-come">
                 <p><i class="fa-solid fa-location-dot"></i> Nơi đi</p>
                 <input type="text" placeholder="Nhập nơi đi">
             </div>
             <div class="input-separator"></div>
 
-            <div class="input-item">
+            <div class="input-item input-to-location">
                 <p><i class="fa-solid fa-location-dot"></i> Nơi đến</p>
                 <input type="text" placeholder="Nhập nơi đến">
             </div>
             <div class="input-separator"></div>
 
-            <div class="input-item">
+            <div class="input-item input-from">
                 <p><i class="fa-solid fa-calendar-days"></i> Ngày đi</p>
                 <input type="text" placeholder="12.11.2024" value="12.11.2024">
             </div>
             <div class="input-separator"></div>
 
-            <div class="input-item">
+            <div class="input-item input-to-date">
                 <p><i class="fa-solid fa-calendar-days"></i> Ngày đến</p>
                 <input type="text" placeholder="30.12.2024" value="30.12.2024">
             </div>
@@ -144,7 +165,81 @@
                 <h1>Lộ trình phổ biến</h1>
             </div>
 
-            <div class="second-layout">
+            <div class="second-layout slick-slider">
+                <div class="second-layout-box">
+                    <div class="second-layout-box-title">
+                        <img src="./Image/second_layout_box_title.png" alt="Xe buýt" />
+                    </div>
+
+                    <div class="second-layout-box-main">
+                        <div class="second-layout-box-main-row">
+                            <div class="second-layout-box-main-city">
+                                <p><i class="fa-solid fa-circle-up"></i> Sài Gòn</p>
+                                <p class="arrows-icon">
+                                    <i class="fa-solid fa-arrows-up-down"></i>
+                                </p>
+                                <p><i class="fa-solid fa-circle-down"></i> Bến Tre</p>
+                            </div>
+                            <div class="second-layout-box-main-price">
+                                <p>Từ: 160.000đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="second-layout-box-end">
+                        <div class="second-layout-box-end-detail">
+                            <p><i class="fas fa-bus"></i>LIMOUSINE 34 GIƯỜNG</p>
+                        </div>
+
+                        <div class="second-layout-box-end-time">
+                            <div class="time-info">
+                                <p>
+                                    <i class="fa-solid fa-location-dot"></i> Khoảng cách: 170 Km
+                                </p>
+                                <p><i class="fas fa-clock"></i> Thời gian: 1h30</p>
+                            </div>
+                            <a href="#">Đặt vé</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="second-layout-box">
+                    <div class="second-layout-box-title">
+                        <img src="./Image/second_layout_box_title.png" alt="Xe buýt" />
+                    </div>
+
+                    <div class="second-layout-box-main">
+                        <div class="second-layout-box-main-row">
+                            <div class="second-layout-box-main-city">
+                                <p><i class="fa-solid fa-circle-up"></i> Sài Gòn</p>
+                                <p class="arrows-icon">
+                                    <i class="fa-solid fa-arrows-up-down"></i>
+                                </p>
+                                <p><i class="fa-solid fa-circle-down"></i> Bến Tre</p>
+                            </div>
+                            <div class="second-layout-box-main-price">
+                                <p>Từ: 160.000đ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="second-layout-box-end">
+                        <div class="second-layout-box-end-detail">
+                            <p><i class="fas fa-bus"></i>LIMOUSINE 34 GIƯỜNG</p>
+                        </div>
+
+                        <div class="second-layout-box-end-time">
+                            <div class="time-info">
+                                <p>
+                                    <i class="fa-solid fa-location-dot"></i> Khoảng cách: 170 Km
+                                </p>
+                                <p><i class="fas fa-clock"></i> Thời gian: 1h30</p>
+                            </div>
+                            <a href="#">Đặt vé</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="second-layout-box">
                     <div class="second-layout-box-title">
                         <img src="./Image/second_layout_box_title.png" alt="Xe buýt" />
@@ -296,6 +391,10 @@
         </div>
     </div>
 
+    <div class="floating-phone-left">
+        <img src="./Image/phone_left.png" alt="Phone left image" />
+    </div>
+
     <!-- Hàng Cài Đặt App đặt vé Mỹ Duyên -->
     <div class="third-section">
         <div class="third-section-left">
@@ -328,10 +427,6 @@
 
 
         <div class="third-section-right">
-            <div class="third-section-right-phone-image-left">
-                <img src="./Image/phone_left.png" alt="Phone left image" />
-            </div>
-
             <div class="third-section-right-phone-image-right">
                 <img src="./Image/phone_right.png" alt="Phone right image" />
             </div>
@@ -543,7 +638,7 @@
 
     <div class="eighth-section">
         <div class="section-title">
-            <h1>Tin tức nổi bật</h1>        
+            <h1>Tin tức nổi bật</h1>
         </div>
 
         <div class="eighth-section-detail">
@@ -557,7 +652,8 @@
                 </div>
 
                 <div class="eighth-section-detail-left-description">
-                    <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam, đặc biệt là ngành công nghiệp điện, cơ sở phát triển nền công nghiệp hiện đại.</p>
+                    <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam, đặc biệt
+                        là ngành công nghiệp điện, cơ sở phát triển nền công nghiệp hiện đại.</p>
                 </div>
             </div>
 
@@ -571,7 +667,8 @@
                             <p>THAN ĐÁ VÀ VAI TRÒ TRONG NGÀNH CÔNG NGHIỆP ĐIỆN</p>
                         </div>
                         <div class="eighth-section-detail-right-news-description">
-                            <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam, đặc biệt là ngành...</p>
+                            <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam,
+                                đặc biệt là ngành...</p>
                         </div>
                     </div>
                 </div>
@@ -586,7 +683,8 @@
                             <p>THAN ĐÁ VÀ VAI TRÒ TRONG NGÀNH CÔNG NGHIỆP ĐIỆN</p>
                         </div>
                         <div class="eighth-section-detail-right-news-description">
-                            <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam, đặc biệt là ngành...</p>
+                            <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam,
+                                đặc biệt là ngành...</p>
                         </div>
                     </div>
                 </div>
@@ -600,7 +698,8 @@
                             <p>THAN ĐÁ VÀ VAI TRÒ TRONG NGÀNH CÔNG NGHIỆP ĐIỆN</p>
                         </div>
                         <div class="eighth-section-detail-right-news-description">
-                            <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam, đặc biệt là ngành...</p>
+                            <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam,
+                                đặc biệt là ngành...</p>
                         </div>
                     </div>
                 </div>
@@ -665,11 +764,15 @@
                 </div>
 
                 <div class="footer-detail-description">
-                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> Trụ sở: Bến xe Trần Đề 1/5, Thị trấn Trần Đề, Trần Đề</p>
-                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i>  VP Sóc Trăng: 38 Lê Duẩn, P. 3</p>
-                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i>  VP Long Phú: Ấp 14, đường Đoàn Thế Trung, TT. Long Phú</p>
-                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i>  VP Mỹ Tú: 170 ấp Ngoại Ô, TT. Huỳnh Hữu Nghĩa</p>
-                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i>  VP Đại Ngãi: Ấp Phụng Tường 2, Xã Long Phụng, Huyện Long Phú</p>
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> Trụ sở: Bến xe Trần Đề 1/5, Thị trấn
+                        Trần Đề, Trần Đề</p>
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> VP Sóc Trăng: 38 Lê Duẩn, P. 3</p>
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> VP Long Phú: Ấp 14, đường Đoàn Thế
+                        Trung, TT. Long Phú</p>
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> VP Mỹ Tú: 170 ấp Ngoại Ô, TT. Huỳnh
+                        Hữu Nghĩa</p>
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> VP Đại Ngãi: Ấp Phụng Tường 2, Xã
+                        Long Phụng, Huyện Long Phú</p>
                 </div>
 
                 <div class="footer-detail-title">
@@ -677,7 +780,8 @@
                 </div>
 
                 <div class="footer-detail-description">
-                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> VP Ngã Bảy: Đường 3/2, Khu Vực 5, Phường Ngã Bảy, TP. Ngã Bảy</p>
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> VP Ngã Bảy: Đường 3/2, Khu Vực 5,
+                        Phường Ngã Bảy, TP. Ngã Bảy</p>
                 </div>
 
                 <div class="footer-detail-title">
@@ -685,7 +789,8 @@
                 </div>
 
                 <div class="footer-detail-description">
-                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> Bến xe Cần Thơ: 91B Nguyễn Văn Linh, Hưng Lợi, Ninh Kiều, Cần Thơ</p>
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> Bến xe Cần Thơ: 91B Nguyễn Văn Linh,
+                        Hưng Lợi, Ninh Kiều, Cần Thơ</p>
                 </div>
 
                 <div class="footer-detail-title">
@@ -693,7 +798,8 @@
                 </div>
 
                 <div class="footer-detail-description">
-                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> Bến xe Miền Tây: Phòng vé 16/395 Kinh Dương Vương, P. An Lạc, Q. Bình Tân</p>
+                    <p><i class="fa-solid fa-building" style="color: #ffffff;"></i> Bến xe Miền Tây: Phòng vé 16/395
+                        Kinh Dương Vương, P. An Lạc, Q. Bình Tân</p>
                 </div>
 
             </div>
@@ -701,15 +807,14 @@
         </div>
     </div>
     <div class="footer-copyright">
-                <div class="footer-copyright-date">
-                    <p>Copyright © 2024 My Duyen. Powered by HD Agency</p>
-                </div>
+        <div class="footer-copyright-date">
+            <p>Copyright © 2024 My Duyen. Powered by HD Agency</p>
+        </div>
 
-                <div class="footer-copyright-policy">
-                    <a href="#">Website Terms of Use</a> |  <a href="#">Privacy policy</a>
-                </div>
-            </div>
-    
+        <div class="footer-copyright-policy">
+            <a href="#">Website Terms of Use</a> | <a href="#">Privacy policy</a>
+        </div>
+    </div>
 
 </body>
 
